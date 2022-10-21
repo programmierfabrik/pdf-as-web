@@ -29,5 +29,5 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          build-args:
-            VERSION: ${{ inputs.version }}
+          build-args: |
+            VERSION=${{ inputs.version }}
