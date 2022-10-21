@@ -30,4 +30,4 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           build-args:
-            - VERSION=${{ inputs.version }}
+            VERSION: ${{ inputs.version }}
