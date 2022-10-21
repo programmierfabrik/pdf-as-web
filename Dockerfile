@@ -15,3 +15,7 @@ RUN curl -s -o ${CATALINA_HOME}/webapps/pdf-as-web.war              ${BASE_URL}/
 
 COPY pdf-as-web.properties ${CATALINA_HOME}/conf/pdf-as/pdf-as-web.properties
 COPY setenv.sh ${CATALINA_HOME}/bin/
+
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+CMD ["catalina.sh", "run"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
