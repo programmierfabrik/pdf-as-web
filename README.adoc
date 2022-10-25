@@ -1,1 +1,14 @@
 = PDF-AS Web
+
+== Running the image
+
+You can provide the following environment variables for this image:
+
+* `HOST`: Needed for the signing flow. If this is not set properly the signing will fail
+* `CATALINA_OPTS`: Optionally change the opts for the tomcat
+
+== Building the image
+
+```bash
+docker build --tag pdf-as-web:tag --build-arg VERSION=x.x.x .
+```
